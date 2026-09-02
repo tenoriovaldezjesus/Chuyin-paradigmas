@@ -1,0 +1,29 @@
+@startuml
+
+abstract class Figura {
+  abstract calcularArea() : double
+  mostrarNombre() : void
+}
+
+class Circulo {
+  - radio : double
+  + Circulo(radio : double)
+  + calcularArea() : double
+}
+
+class Rectangulo {
+  - longitud : double
+  - anchura : double
+  + Rectangulo(longitud : double, anchura : double)
+  + calcularArea() : double
+}
+
+class Main {
+  + {static} main(args : String[]) : void
+}
+
+Figura <|-- Circulo
+Figura <|-- Rectangulo
+Main ..> Figura : instancia / usa
+
+@enduml

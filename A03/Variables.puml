@@ -1,0 +1,11 @@
+@startuml
+
+class Usuario {
+  -nombre : String
+  -{static} total : int = 0
+  +Usuario(nombre : String)
+  +{static} obtenerTotal() : int
+  +{static} main(args : String[]) : void
+}
+
+@enduml
